@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="portofolio-text">Portfolio</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a class="dark-purple" href="#home">Home</a></li>
+            <li><a class="licht-paars" href="#about">About</a></li>
+            <li><a class="dark-purple" href="#work">Work</a></li>
+            <li><a class="licht-paars" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-container">
+      <div class="foto-start">
+        <img
+          src="fotos/462559927_925198392868451_2759762176840911956_n.jpg"
+          alt="Portofolio Photo"
+          class="profile-photo"
+        />
+      </div>
+
+      <div class="text-content">
+        <h1>
+          <span class="normal-text">Hi, I m</span>
+          <span class="highlighted-text">Ana</span>
+        </h1>
+        <h3>
+          <span class="normal-text">I m a</span>
+          <span class="highlighted-text">Student</span>
+        </h3>
+        <p>
+          I’m a Software Development student at ROC Nijmegen, passionate about
+          building modern and functional websites.
+        </p>
+        <div class="icons">
+          <a
+            href="https://instagram.com/simply.ana08"
+            target="_blank"
+            class="icon"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:ana.t08@yahoo.com" class="icon">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:0620243966" class="icon">
+            <i class="fas fa-phone"></i>
+          </a>
+
+          <a href="https://web.whatsapp.com/" target="_blank" class="icon">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <button class="hire-me" onclick="redirectToContact()">Hire me</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="reveal about">
+      <h2>About Me</h2>
+      <div class="about-text">
+        <p class="text-about text-1">
+          My name is Ana Tirziu, I am 17 years old, and I am currently a
+          Software Development student at ROC Nijmegen. I am passionate about
+          creating modern and functional websites, combining clean design with
+          efficient code to bring ideas to life.
+        </p>
+        <p class="text-about text-2">
+          One of my proudest achievements so far has been developing a complete
+          website during my first semester, a project that challenged me to
+          balance creativity with technical precision. This experience helped me
+          refine my skills in coding, problem-solving, and designing
+          user-friendly interfaces.
+        </p>
+        <p class="text-about text-3">
+          What motivates me most is my genuine love for web development. I enjoy
+          the entire process—from brainstorming and structuring ideas to writing
+          the code and seeing the final product take shape. I am always eager to
+          learn and grow, whether by taking on new projects, exploring
+          innovative tools, or improving my existing skills.
+        </p>
+        <p class="text-about text-4">
+          In the future, I aspire to work on projects that not only challenge me
+          but also allow me to create impactful and meaningful solutions in the
+          digital world.
+        </p>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="reveal work">
+      <h4>My Work/Projects</h4>
+      <div class="project">
+        <div class="project-item">
+          <img
+            src="fotos/Screenshot-2024-11-21-085221.png"
+            alt="Pink Goose Website"
+          />
+          <div class="project-description">
+            <h5>Pink Goose Website</h5>
+            <p>
+              "This was my very first project: a large-scale website about Pink
+              Goose. It challenged me to learn the basics of web development,
+              from creating a functional layout to adding stylish elements,
+              helping me build a solid foundation in coding. The website is
+              build with HTML and CSS."
+            </p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img
+            src="fotos/Screenshot-2024-11-21-085517.png"
+            alt="School and Profile Website"
+          />
+          <div class="project-description">
+            <h5>School and Profile Website</h5>
+            <p>
+              "Created during Project Week, this website highlights my school
+              and the Software Development program. It showcases the skills I
+              gained, including presenting structured information and designing
+              user-friendly interfaces. The website is build with HTML and CSS."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h4>Contact me</h4>
+      <div class="neon-border">
+        <div class="content-wrapper">
+          <form class="contact-form" action="send_email.php" method="post">
+            <div class="input-box">
+              <input type="text" name="name" placeholder="Your name" required />
+            </div>
+            <div class="input-box">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <textarea
+                name="message"
+                placeholder="Your message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button class="send-button" type="submit">Send</button>
+          </form>
+          <div class="contact-info">
+            <p><strong>My phone number</strong><br />0031620243966</p>
+            <p><strong>My email</strong><br />ana.t08@yahoo.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
