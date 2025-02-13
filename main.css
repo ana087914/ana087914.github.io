@@ -522,3 +522,51 @@ h9.wit {
   font-weight: 500;
   font-style: normal;
 }
+/* =================== MEDIA QUERIES =================== */
+
+/* Tablete (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .nav ul {
+    flex-direction: column; /* Meniul devine vertical */
+    align-items: center;
+  }
+
+  .characters-grid {
+    grid-template-columns: 1fr 1fr; /* 2 coloane în loc de 3 */
+  }
+
+  .creators-grid {
+    grid-template-columns: 1fr 1fr; /* 2 coloane pentru creatori */
+  }
+}
+
+/* Telefoane (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* Diminuează fonturile */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav ul li {
+    margin: 5px 0;
+  }
+
+  .characters-grid,
+  .creators-grid {
+    grid-template-columns: 1fr; /* O singură coloană pentru caractere și creatori */
+  }
+
+  .history-content {
+    padding: 15px; /* Mai puțin padding pentru text */
+  }
+
+  .character img,
+  .creator-card img {
+    max-width: 80%; /* Redimensionare imagini */
+  }
+}
