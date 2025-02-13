@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)https://codepen.io/anon/embed/xmpxjp?height=500&theme-id=1&slug-hash=xmpxjp&default-tab=result -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">
+
+  <title>CodePen Embed - Animated Ripples background </title>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="63ZeOiU28yS5Pb0moaBDmsT+4/NMkdstRIPT9DekVrKlgByNEs4wFIYYgEckggSH2mMjajo+ivKqkBD8D3ndQQ==">
+
+  <link rel="stylesheet" media="all" href="./embed-ad67fe72acfeb011f9e0361df99b8dd024a995b725b6034694d1529c4f6bd5ca.css">
+
+  <style>
+    .hide {
+      display: none !important;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #28282a;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #424242;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #212121;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #ff8a00;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #a9a9a9;
+    }
+
+    .embed-nav svg {
+      stroke: #a9a9a9 !important;
+    }
+  </style>
+
+  <link rel="stylesheet" media="all" href="./highcontrast-dark-f425686592da923b79e7aaab67bb8c72ee517d989ff13dfb02586480a6810ad6.css">
+
+  <link rel="stylesheet" href="./maVRwd.css">
+</head>
+
+<body id="the-body" style="border: 1px solid #39231b; --borderWidth: 1px;" class="codepen-embed-body static results-active">
+
+  <nav class="embed-nav group" id="embed-nav">
+
+  <ul class="code-types">
+
+
+        <li class="code-type">
+          <a id="html-link" href="https://codepen.io/anon/embed/xmpxjp?height=500&amp;theme-id=1&amp;slug-hash=xmpxjp&amp;default-tab=result#html-box" role="button" aria-pressed="false">
+              Haml
+          </a>
+        </li>
+
+
+        <li class="code-type">
+          <a id="css-link" href="https://codepen.io/anon/embed/xmpxjp?height=500&amp;theme-id=1&amp;slug-hash=xmpxjp&amp;default-tab=result#css-box" role="button" aria-pressed="false">
+              CSS
+          </a>
+        </li>
+
+
+
+
+  </ul>
+
+  <ul class="result-button-list">
+    <li class="results results-type">
+      <a id="result-link" href="https://codepen.io/anon/embed/xmpxjp?height=500&amp;theme-id=1&amp;slug-hash=xmpxjp&amp;default-tab=result#result-box" class="active" aria-pressed="true" role="button">
+        Result
+      </a>
+    </li>
+    <li>
+      <a href="https://codepen.io/anon/embed/xmpxjp?height=500&amp;theme-id=1&amp;slug-hash=xmpxjp&amp;default-tab=result#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+    </li>
+  </ul>
+
+
+    <div class="logo-wrap" id="edit-area">
+
+        <a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/vaibhavarora/pen/xmpxjp" title="Edit on CodePen">
+            <div class="large-logo">
+    <span id="edit-on-text" class="open-on">EDIT ON</span>
+    <svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+  <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+  </div>
+  <div class="box-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+  <path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+  </div>
+        </a>
+
+    
+    </div>
+
+
+</nav>
+
+
+  <div id="output" data-border-style="thin" data-header="true">
+
+
+
+        <div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+
+
+          <pre tabindex="0"><code data-lang="haml" id="actual-html-code" class=" cm-s-default"><span class="cm-attribute">.ripple-background</span>
+  <span class="cm-attribute">.circle.xxlarge.shade1</span>
+  <span class="cm-attribute">.circle.xlarge.shade2</span>
+  <span class="cm-attribute">.circle.large.shade3</span>
+  <span class="cm-attribute">.circle.mediun.shade4</span>
+  <span class="cm-attribute">.circle.small.shade5</span></code></pre>
+
+            <a href="https://codepen.io/anon/embed/xmpxjp?height=500&amp;theme-id=1&amp;slug-hash=xmpxjp&amp;default-tab=result#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+              View Compiled
+            </a>
+        </div>
+
+
+
+        <div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+
+
+          <pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span>{
+  <span class="cm-property">background</span>: <span class="cm-atom">#3399ff</span>;
+}
+
+
+<span class="cm-qualifier">.circle</span>{
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">background</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">animation</span>: <span class="cm-variable">ripple</span> <span class="cm-number">15s</span> <span class="cm-atom">infinite</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0px</span> <span class="cm-number">0px</span> <span class="cm-number">1px</span> <span class="cm-number">0px</span> <span class="cm-atom">#508fb9</span>;
+}
+
+<span class="cm-qualifier">.small</span>{
+  <span class="cm-property">width</span>: <span class="cm-number">200px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">200px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">-100px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">-100px</span>;
+}
+
+<span class="cm-qualifier">.medium</span>{
+  <span class="cm-property">width</span>: <span class="cm-number">400px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">400px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">-200px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">-200px</span>;
+}
+
+<span class="cm-qualifier">.large</span>{
+  <span class="cm-property">width</span>: <span class="cm-number">600px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">600px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">-300px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">-300px</span>;
+}
+
+<span class="cm-qualifier">.xlarge</span>{
+  <span class="cm-property">width</span>: <span class="cm-number">800px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">800px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">-400px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">-400px</span>;
+}
+
+<span class="cm-qualifier">.xxlarge</span>{
+  <span class="cm-property">width</span>: <span class="cm-number">1000px</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">1000px</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">-500px</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">-500px</span>;
+}
+
+<span class="cm-qualifier">.shade1</span>{
+  <span class="cm-property">opacity</span>: <span class="cm-number">0.2</span>;
+}
+<span class="cm-qualifier">.shade2</span>{
+  <span class="cm-property">opacity</span>: <span class="cm-number">0.5</span>;
+}
+
+<span class="cm-qualifier">.shade3</span>{
+  <span class="cm-property">opacity</span>: <span class="cm-number">0.7</span>;
+}
+
+<span class="cm-qualifier">.shade4</span>{
+  <span class="cm-property">opacity</span>: <span class="cm-number">0.8</span>;
+}
+
+<span class="cm-qualifier">.shade5</span>{
+  <span class="cm-property">opacity</span>: <span class="cm-number">0.9</span>;
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">ripple</span>{
+  <span class="cm-number">0%</span>{
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">0.8</span>);
+  }
+  
+  <span class="cm-number">50%</span>{
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">1.2</span>);
+  }
+  
+  <span class="cm-number">100%</span>{
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">scale</span>(<span class="cm-number">0.8</span>);
+  }
+}
+</code></pre>
+
+        </div>
+
+
+
+
+
+    <div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+
+
+  <iframe allow="accelerometer *; bluetooth *; camera *; encrypted-media *; display-capture *; geolocation *; gyroscope *; microphone *; midi *; clipboard-read *; clipboard-write *; web-share *; serial *; xr-spatial-tracking *" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Animated Ripples background " sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups-to-escape-sandbox allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Animated Ripples background " data-src="https://codepen.io/vaibhavarora/fullembedgrid/xmpxjp?animations=run&amp;type=embed" src="./xmpxjp(1).html">
+  </iframe>
+
+
+</div>
+
+
+    <div id="about-box">
+
+  <div class="about-container">
+
+
+    <div class="about-user">
+
+        <a href="https://codepen.io/vaibhavarora" target="_blank" rel="noopener"><img src="./user-default-avatar.jpg" loading="lazy" alt="" class="about-image"></a>
+
+      <div class="about-user-info">
+
+
+        <p>
+          This Pen is owned by <a href="https://codepen.io/vaibhavarora" target="_blank" rel="noopener">Vaibhav Arora</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+
+        </p>
+
+        <p>
+          <a href="https://codepen.io/vaibhavarora" target="_blank" rel="noopener" class="about-user-more">
+          See more by @vaibhavarora on CodePen
+          </a>
+        </p>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+    <div id="resources-box" class="resources-box">
+
+  <h3>External CSS</h3>
+    <p>
+      This Pen doesn't use any external CSS resources.
+    </p>
+
+  <h3>External JavaScript</h3>
+    <p>
+      This Pen doesn't use any external JavaScript resources.
+    </p>
+
+</div>
+
+
+  </div>
+
+    <footer class="embed-footer" id="embed-footer">
+
+    <button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+      Resources
+    </button>
+
+    <ul class="scaling-choices bottom right">
+  <li><button class="action-button" id="zoom-button-1">1×</button></li>
+  <li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+  <li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+
+<button id="rerun-button" class="action-button rerun-button bottom right">
+  Rerun
+</button>
+
+  </footer>
+
+
+
+  <script nonce="">
+    __processedPen = {"html":"&lt;div class=&#39;ripple-background&#39;&gt;\n  &lt;div class=&#39;circle xxlarge shade1&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;circle xlarge shade2&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;circle large shade3&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;circle mediun shade4&#39;&gt;&lt;/div&gt;\n  &lt;div class=&#39;circle small shade5&#39;&gt;&lt;/div&gt;\n&lt;/div&gt;","css":"body{\n  background: #3399ff;\n}\n\n\n.circle{\n  position: absolute;\n  border-radius: 50%;\n  background: white;\n  animation: ripple 15s infinite;\n  box-shadow: 0px 0px 1px 0px #508fb9;\n}\n\n.small{\n  width: 200px;\n  height: 200px;\n  left: -100px;\n  bottom: -100px;\n}\n\n.medium{\n  width: 400px;\n  height: 400px;\n  left: -200px;\n  bottom: -200px;\n}\n\n.large{\n  width: 600px;\n  height: 600px;\n  left: -300px;\n  bottom: -300px;\n}\n\n.xlarge{\n  width: 800px;\n  height: 800px;\n  left: -400px;\n  bottom: -400px;\n}\n\n.xxlarge{\n  width: 1000px;\n  height: 1000px;\n  left: -500px;\n  bottom: -500px;\n}\n\n.shade1{\n  opacity: 0.2;\n}\n.shade2{\n  opacity: 0.5;\n}\n\n.shade3{\n  opacity: 0.7;\n}\n\n.shade4{\n  opacity: 0.8;\n}\n\n.shade5{\n  opacity: 0.9;\n}\n\n@keyframes ripple{\n  0%{\n    transform: scale(0.8);\n  }\n  \n  50%{\n    transform: scale(1.2);\n  }\n  \n  100%{\n    transform: scale(0.8);\n  }\n}","js":""};
+    __preprocessors = {
+      "html": "haml",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "Haml",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+
+  <script src="./embed-d492f8b0f63f0a8ba679c9cd0a2fffbaa24504a7928435ba1bfc1859f904e02b.js.download"></script>
+
+
+<script nonce="">(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.nonce='kDqN21e+GVw=';d.innerHTML="window.__CF$cv$params={r:'90d31c79bcb896ec',t:'MTczODc2MDcxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='kDqN21e+GVw=';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./saved_resource(28).html"></iframe>
+
+</body></html>

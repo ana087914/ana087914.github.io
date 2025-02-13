@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://cdpn.io/Mamboleoo/fullembedgrid/BxMQYQ?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>Bokeh effect (CSS)</title>
+
+    <link rel="canonical" href="https://codepen.io/Mamboleoo/pen/BxMQYQ">
+  
+  
+  
+  
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #3E1E68;
+}
+
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.background span:nth-child(1) {
+  color: #E45A84;
+  top: 93%;
+  left: 97%;
+  animation-duration: 11.5s;
+  animation-delay: -3.1s;
+  transform-origin: 10vw 5vh;
+  box-shadow: -40vmin 0 6.2730813318vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #E45A84;
+  top: 13%;
+  left: 59%;
+  animation-duration: 12.2s;
+  animation-delay: -1.6s;
+  transform-origin: 19vw -22vh;
+  box-shadow: 40vmin 0 11.5674453684vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #FFACAC;
+  top: 94%;
+  left: 87%;
+  animation-duration: 11.2s;
+  animation-delay: -7.4s;
+  transform-origin: -6vw 7vh;
+  box-shadow: -40vmin 0 6.2254951977vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #FFACAC;
+  top: 76%;
+  left: 40%;
+  animation-duration: 14.1s;
+  animation-delay: -0.2s;
+  transform-origin: 12vw 4vh;
+  box-shadow: 40vmin 0 10.7894524784vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #E45A84;
+  top: 62%;
+  left: 5%;
+  animation-duration: 12.1s;
+  animation-delay: -2.8s;
+  transform-origin: 5vw 2vh;
+  box-shadow: -40vmin 0 12.1105869613vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #E45A84;
+  top: 11%;
+  left: 76%;
+  animation-duration: 11.9s;
+  animation-delay: -6.8s;
+  transform-origin: -9vw -3vh;
+  box-shadow: 40vmin 0 8.0167859185vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #E45A84;
+  top: 92%;
+  left: 14%;
+  animation-duration: 14.5s;
+  animation-delay: -5s;
+  transform-origin: 25vw -8vh;
+  box-shadow: -40vmin 0 12.086272365vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #FFACAC;
+  top: 5%;
+  left: 41%;
+  animation-duration: 13.1s;
+  animation-delay: -12.6s;
+  transform-origin: 5vw -23vh;
+  box-shadow: 40vmin 0 6.6547819589vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #583C87;
+  top: 54%;
+  left: 92%;
+  animation-duration: 16s;
+  animation-delay: -7.2s;
+  transform-origin: 1vw -21vh;
+  box-shadow: -40vmin 0 13.9737993049vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #E45A84;
+  top: 6%;
+  left: 18%;
+  animation-duration: 10.8s;
+  animation-delay: -7.7s;
+  transform-origin: -23vw -3vh;
+  box-shadow: -40vmin 0 6.6610423389vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #583C87;
+  top: 25%;
+  left: 91%;
+  animation-duration: 14.2s;
+  animation-delay: -15.1s;
+  transform-origin: -14vw -11vh;
+  box-shadow: -40vmin 0 12.4633643444vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #FFACAC;
+  top: 27%;
+  left: 90%;
+  animation-duration: 15.4s;
+  animation-delay: -4.5s;
+  transform-origin: -7vw 15vh;
+  box-shadow: -40vmin 0 11.6646495151vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #583C87;
+  top: 99%;
+  left: 15%;
+  animation-duration: 11.3s;
+  animation-delay: -2.1s;
+  transform-origin: -20vw -23vh;
+  box-shadow: 40vmin 0 11.8310114637vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #583C87;
+  top: 78%;
+  left: 82%;
+  animation-duration: 14.9s;
+  animation-delay: -6.8s;
+  transform-origin: 6vw 25vh;
+  box-shadow: -40vmin 0 7.4411348974vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #FFACAC;
+  top: 64%;
+  left: 16%;
+  animation-duration: 13.3s;
+  animation-delay: -14.5s;
+  transform-origin: -13vw -16vh;
+  box-shadow: -40vmin 0 11.1675113813vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #E45A84;
+  top: 73%;
+  left: 38%;
+  animation-duration: 10.6s;
+  animation-delay: -5.2s;
+  transform-origin: 24vw -17vh;
+  box-shadow: -40vmin 0 7.1985565558vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #583C87;
+  top: 18%;
+  left: 60%;
+  animation-duration: 12s;
+  animation-delay: -3s;
+  transform-origin: 20vw -2vh;
+  box-shadow: 40vmin 0 5.256336421vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #E45A84;
+  top: 74%;
+  left: 17%;
+  animation-duration: 11.9s;
+  animation-delay: -14.3s;
+  transform-origin: 15vw 23vh;
+  box-shadow: -40vmin 0 13.3000921156vmin currentColor;
+}
+.background span:nth-child(19) {
+  color: #583C87;
+  top: 69%;
+  left: 17%;
+  animation-duration: 14.3s;
+  animation-delay: -9.9s;
+  transform-origin: -20vw 4vh;
+  box-shadow: -40vmin 0 7.5874218804vmin currentColor;
+}
+.background span:nth-child(20) {
+  color: #583C87;
+  top: 43%;
+  left: 30%;
+  animation-duration: 15s;
+  animation-delay: -7.7s;
+  transform-origin: 8vw -1vh;
+  box-shadow: -40vmin 0 9.6846504925vmin currentColor;
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="background">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  
+  
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+
+
+
+</body></html>

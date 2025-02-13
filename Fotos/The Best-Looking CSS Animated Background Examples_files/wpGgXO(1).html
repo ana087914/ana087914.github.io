@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://cdpn.io/nashvail/fullembedgrid/wpGgXO?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+
+
+  <title>Random Responsive balls in the background </title>
+
+    <link rel="canonical" href="https://codepen.io/nashvail/pen/wpGgXO">
+  
+  
+  
+  
+<style>
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  
+  
+      <script id="rendered-js">
+// Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {if (window.CP.shouldStopExecution(0)) break;
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+window.CP.exitedLoop(0);balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12 };
+
+
+  let anim = el.animate(
+  [
+  { transform: "translate(0, 0)" },
+  { transform: `translate(${to.x}rem, ${to.y}rem)` }],
+
+  {
+    duration: (Math.random() + 1) * 2000, // random duration
+    direction: "alternate",
+    fill: "both",
+    iterations: Infinity,
+    easing: "ease-in-out" });
+
+
+});
+//# sourceURL=pen.js
+    </script><div class="ball" style="background: rgb(252, 188, 15); left: 56vw; top: 53vh; transform: scale(0.135683); width: 0.246056em; height: 0.246056em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 34vw; top: 48vh; transform: scale(0.974428); width: 0.739765em; height: 0.739765em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 32vw; top: 26vh; transform: scale(0.113489); width: 0.613395em; height: 0.613395em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 70vw; top: 63vh; transform: scale(0.846884); width: 0.110023em; height: 0.110023em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 82vw; top: 13vh; transform: scale(0.834077); width: 0.978365em; height: 0.978365em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 47vw; top: 41vh; transform: scale(0.875411); width: 0.910054em; height: 0.910054em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 4vw; top: 91vh; transform: scale(0.550364); width: 0.393509em; height: 0.393509em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 97vw; top: 4vh; transform: scale(0.85444); width: 0.759192em; height: 0.759192em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 8vw; top: 54vh; transform: scale(0.88794); width: 0.233285em; height: 0.233285em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 12vw; top: 97vh; transform: scale(0.436452); width: 0.802638em; height: 0.802638em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 65vw; top: 71vh; transform: scale(0.489588); width: 0.25222em; height: 0.25222em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 24vw; top: 97vh; transform: scale(0.524635); width: 0.54366em; height: 0.54366em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 2vw; top: 76vh; transform: scale(0.215754); width: 0.146556em; height: 0.146556em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 1vw; top: 85vh; transform: scale(0.106655); width: 0.0657011em; height: 0.0657011em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 27vw; top: 11vh; transform: scale(0.149494); width: 0.443787em; height: 0.443787em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 49vw; top: 52vh; transform: scale(0.93653); width: 0.237731em; height: 0.237731em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 40vw; top: 98vh; transform: scale(0.932138); width: 0.444841em; height: 0.444841em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 3vw; top: 74vh; transform: scale(0.223665); width: 0.63334em; height: 0.63334em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 62vw; top: 65vh; transform: scale(0.93642); width: 0.843088em; height: 0.843088em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 31vw; top: 96vh; transform: scale(0.582526); width: 0.765847em; height: 0.765847em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 99vw; top: 72vh; transform: scale(0.220378); width: 0.864408em; height: 0.864408em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 43vw; top: 4vh; transform: scale(0.0143776); width: 0.174604em; height: 0.174604em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 1vw; top: 28vh; transform: scale(0.0102063); width: 0.336547em; height: 0.336547em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 75vw; top: 56vh; transform: scale(0.291716); width: 0.645213em; height: 0.645213em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 7vw; top: 41vh; transform: scale(0.274981); width: 0.0236426em; height: 0.0236426em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 35vw; top: 79vh; transform: scale(0.550638); width: 0.996015em; height: 0.996015em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 94vw; top: 72vh; transform: scale(0.92639); width: 0.258287em; height: 0.258287em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 96vw; top: 55vh; transform: scale(0.825558); width: 0.0259667em; height: 0.0259667em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 95vw; top: 80vh; transform: scale(0.17916); width: 0.945475em; height: 0.945475em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 68vw; top: 48vh; transform: scale(0.845481); width: 0.575048em; height: 0.575048em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 34vw; top: 90vh; transform: scale(0.212804); width: 0.532761em; height: 0.532761em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 26vw; top: 65vh; transform: scale(0.571957); width: 0.583792em; height: 0.583792em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 62vw; top: 40vh; transform: scale(0.045756); width: 0.62479em; height: 0.62479em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 34vw; top: 92vh; transform: scale(0.804819); width: 0.48244em; height: 0.48244em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 45vw; top: 68vh; transform: scale(0.32926); width: 0.305831em; height: 0.305831em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 31vw; top: 91vh; transform: scale(0.563833); width: 0.92517em; height: 0.92517em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 93vw; top: 53vh; transform: scale(0.62124); width: 0.847582em; height: 0.847582em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 61vw; top: 44vh; transform: scale(0.68121); width: 0.915329em; height: 0.915329em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 12vw; top: 59vh; transform: scale(0.272819); width: 0.53603em; height: 0.53603em;"></div><div class="ball" style="background: rgb(60, 193, 87); left: 11vw; top: 62vh; transform: scale(0.115974); width: 0.983138em; height: 0.983138em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 81vw; top: 45vh; transform: scale(0.154366); width: 0.557248em; height: 0.557248em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 68vw; top: 15vh; transform: scale(0.0531154); width: 0.0096549em; height: 0.0096549em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 81vw; top: 59vh; transform: scale(0.344954); width: 0.573132em; height: 0.573132em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 74vw; top: 10vh; transform: scale(0.226103); width: 0.551416em; height: 0.551416em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 0vw; top: 27vh; transform: scale(0.535401); width: 0.136625em; height: 0.136625em;"></div><div class="ball" style="background: rgb(252, 188, 15); left: 67vw; top: 45vh; transform: scale(0.886456); width: 0.719738em; height: 0.719738em;"></div><div class="ball" style="background: rgb(27, 27, 27); left: 30vw; top: 95vh; transform: scale(0.182889); width: 0.859573em; height: 0.859573em;"></div><div class="ball" style="background: rgb(248, 95, 54); left: 66vw; top: 82vh; transform: scale(0.922452); width: 0.765988em; height: 0.765988em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 91vw; top: 37vh; transform: scale(0.95034); width: 0.0967845em; height: 0.0967845em;"></div><div class="ball" style="background: rgb(42, 167, 255); left: 46vw; top: 53vh; transform: scale(0.669962); width: 0.139355em; height: 0.139355em;"></div>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+
+
+
+</body></html>

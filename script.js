@@ -1,86 +1,43 @@
-// Select elements
-const revealSections = document.querySelectorAll('.reveal');
-const buttons = document.querySelectorAll('.hire-me, .icon');
-const header = document.querySelector('.header'); // Header element
-
-// Function to reveal sections on scroll
-function revealOnScroll() {
-  revealSections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight / 1.3;
-
-    if (sectionTop < triggerPoint) {
-      section.classList.add('reveal-visible');
-    } else {
-      section.classList.remove('reveal-visible');
+window.addEventListener("scroll", () => {
+    const scrollPercentage =
+      window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    const colorValue = Math.min(255, Math.floor(scrollPercentage * 255));
+  
+    document.body.style.backgroundColor = `rgb(${255 - colorValue}, ${
+      255 - colorValue
+    }, ${255 - colorValue})`;
+    document.body.style.color = colorValue > 150 ? "white" : "black";
+  });
+  
+  // Smooth scroll to sections
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const quantity = 40; // Crește numărul de licurici
+    const container = document.querySelector(".fireflies-container");
+  
+    for (let i = 0; i < quantity; i++) {
+      const firefly = document.createElement("div");
+      firefly.classList.add("firefly");
+  
+      // Poziție inițială random
+      firefly.style.left = Math.random() * 100 + "vw";
+      firefly.style.top = Math.random() * 100 + "vh";
+  
+      // Randomizare durată animație
+      firefly.style.animationDuration = `${5 + Math.random() * 10}s`;
+  
+      container.appendChild(firefly);
     }
   });
-}
-
-// Add shine effect to buttons
-function addButtonShineEffect() {
-  buttons.forEach(button => {
-    button.addEventListener('mousemove', e => {
-      const rect = button.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      button.style.setProperty('--x', `${x}px`);
-      button.style.setProperty('--y', `${y}px`);
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("continue-button").addEventListener("click", function () {
+        document.getElementById("information").scrollIntoView({ behavior: "smooth" });
     });
-  });
-}
-
-// Add shimmer effect on hover
-function addButtonHoverEffect() {
-  buttons.forEach(button => {
-    button.addEventListener('mouseover', () => {
-      button.classList.add('shimmer-effect');
-    });
-    button.addEventListener('mouseleave', () => {
-      button.classList.remove('shimmer-effect');
-    });
-  });
-}
-
-// Add header animation on scroll
-function animateHeader() {
-  const scrollY = window.scrollY;
-
-  if (scrollY > 50) {
-   
-  } else {
-   
-  }
-}
-function redirectToContact() {
-  window.location.href = "#contact"; // Navighează la secțiunea de contact
-}
-
-// Animated text effect in header
-function animateHeaderText() {
-  const headerText = document.querySelector('.header-text');
-  
-  
-}
-
-// Initialize animations
-function init() {
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('scroll', animateHeader);
-  addButtonShineEffect();
-  addButtonHoverEffect();
-  animateHeaderText();
-}
-
-// Start animations
-init();
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
 });
-

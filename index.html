@@ -3,184 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <title>Horror Game Website</title>
     <link rel="stylesheet" href="main.css" />
+    <script defer src="script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Love+Ya+Like+A+Sister&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <div class="header-container">
-        <div class="portofolio-text">Portfolio</div>
-        <nav>
-          <ul class="nav-links">
-            <li><a class="dark-purple" href="#home">Home</a></li>
-            <li><a class="licht-paars" href="#about">About</a></li>
-            <li><a class="dark-purple" href="#work">Work</a></li>
-            <li><a class="licht-paars" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <img class="logo" src="Fotos/Artboard 1 1.png" alt="" />
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="#home" class="menu-item">
+              <span class="icon">🏠</span>
+              <span class="text">HOME</span>
+            </a>
+          </li>
+          <li>
+            <a href="#information" class="menu-item">
+              <span class="icon">🍊</span>
+              <span class="text">INFORMATION</span>
+            </a>
+          </li>
+          <li>
+            <a href="#characters" class="menu-item">
+              <span class="icon">🍎</span>
+              <span class="text">CHARACTERS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#history" class="menu-item">
+              <span class="icon">🌍</span>
+              <span class="text">HISTORY</span>
+            </a>
+          </li>
+          <li>
+            <a href="#creators" class="menu-item">
+              <span class="icon">🔔</span>
+              <span class="text">CREATORS</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="home-container">
-      <div class="foto-start">
-        <img
-          src="fotos/462559927_925198392868451_2759762176840911956_n.jpg"
-          alt="Portofolio Photo"
-          class="profile-photo"
-        />
-      </div>
+    <div class="container">
+      <!-- Home Section -->
+      <section id="home" class="section home">
+        <div class="home-content"></div>
 
-      <div class="text-content">
-        <h1>
-          <span class="normal-text">Hi, I m</span>
-          <span class="highlighted-text">Ana</span>
-        </h1>
-        <h3>
-          <span class="normal-text">I m a</span>
-          <span class="highlighted-text">Student</span>
-        </h3>
-        <p>
-          I’m a Software Development student at ROC Nijmegen, passionate about
-          building modern and functional websites.
-        </p>
-        <div class="icons">
-          <a
-            href="https://instagram.com/simply.ana08"
-            target="_blank"
-            class="icon"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="mailto:ana.t08@yahoo.com" class="icon">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="tel:0620243966" class="icon">
-            <i class="fas fa-phone"></i>
-          </a>
-
-          <a href="https://web.whatsapp.com/" target="_blank" class="icon">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+        <div class="fireflies-container">
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const quantity = 15;
+              const container = document.querySelector(".fireflies-container");
+              for (let i = 0; i < quantity; i++) {
+                const firefly = document.createElement("div");
+                firefly.classList.add("firefly");
+                container.appendChild(firefly);
+              }
+            });
+          </script>
         </div>
-        <button class="hire-me" onclick="redirectToContact()">Hire me</button>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="reveal about">
-      <h2>About Me</h2>
-      <div class="about-text">
-        <p class="text-about text-1">
-          My name is Ana Tirziu, I am 18 years old, and I am currently a
-          Software Development student at ROC Nijmegen. I am passionate about
-          creating modern and functional websites, combining clean design with
-          efficient code to bring ideas to life.
-        </p>
-        <p class="text-about text-2">
-          One of my proudest achievements so far has been developing a complete
-          website during my first semester, a project that challenged me to
-          balance creativity with technical precision. This experience helped me
-          refine my skills in coding, problem-solving, and designing
-          user-friendly interfaces.
-        </p>
-        <p class="text-about text-3">
-          What motivates me most is my genuine love for web development. I enjoy
-          the entire process—from brainstorming and structuring ideas to writing
-          the code and seeing the final product take shape. I am always eager to
-          learn and grow, whether by taking on new projects, exploring
-          innovative tools, or improving my existing skills.
-        </p>
-        <p class="text-about text-4">
-          In the future, I aspire to work on projects that not only challenge me
-          but also allow me to create impactful and meaningful solutions in the
-          digital world.
-        </p>
-      </div>
-    </section>
-
-    <!-- Work Section -->
-    <section id="work" class="reveal work">
-      <h4>My Work/Projects</h4>
-      <div class="project">
-        <div class="project-item">
-          <img
-            src="fotos/Screenshot-2024-11-21-085221.png"
-            alt="Pink Goose Website"
-          />
-          <div class="project-description">
-            <h5>Pink Goose Website</h5>
-            <p>
-              "This was my very first project: a large-scale website about Pink
-              Goose. It challenged me to learn the basics of web development,
-              from creating a functional layout to adding stylish elements,
-              helping me build a solid foundation in coding. The website is
-              build with HTML and CSS."
-            </p>
-          </div>
+      <!-- Information Section -->
+      <section id="information" class="section information">
+        <div class="info-container-text">
+          <h5>Game Description</h5>
         </div>
-        <div class="project-item">
-          <img
-            src="fotos/Screenshot-2024-11-21-085517.png"
-            alt="School and Profile Website"
-          />
-          <div class="project-description">
-            <h5>School and Profile Website</h5>
-            <p>
-              "Created during Project Week, this website highlights my school
-              and the Software Development program. It showcases the skills I
-              gained, including presenting structured information and designing
-              user-friendly interfaces. The website is build with HTML and CSS."
-            </p>
-          </div>
+        <div class="background">
+          <h6 class="info-text">
+            Achromatic Tale is a psychological horror visual novel that explores
+            emotional intelligence, decision-making, and the delicate balance
+            between light and darkness. <br />
+            You wake up in a mystical forest, greeted by small, mushroom-like
+            creatures called the Shroomies. Soon, you encounter Bjork, an
+            enigmatic and unpredictable being whose emotions shape the world
+            around him. His mood swings transform the once-vibrant landscape
+            into something eerie and hostile. <br />
+            Your dialogue choices directly impact Bjork’s temperament—will you
+            soothe his troubled soul or push him further into madness? As you
+            navigate shifting realities, you must uncover the secrets of Bjork’s
+            past, the curse that binds him, and the ancient script that only the
+            cursed can see. <br />
+            With multiple endings, including a tragic demise, survival, or
+            redemption, Achromatic Tale challenges players to make meaningful
+            choices in a world that reacts to every decision.
+          </h6>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <h4>Contact me</h4>
-      <div class="neon-border">
-        <div class="content-wrapper">
-          <form class="contact-form" action="send_email.php" method="post">
-            <div class="input-box">
-              <input type="text" name="name" placeholder="Your name" required />
+      <!-- Characters Section -->
+      <!-- Characters Section -->
+      <section id="characters" class="section characters">
+        <div class="characters-container">
+          <h2 class="characters-title">
+            <span>C</span><span>H</span><span>A</span><span>R</span
+            ><span>A</span><span>C</span><span>T</span><span>E</span
+            ><span>R</span><span>S</span>
+          </h2>
+          <div class="characters-grid">
+            <div class="character">
+              <img src="Fotos/1-1 chroomies.png" alt="Shroomie 1" />
+              <h9>🔴 Shroomie 1 (The Playful One)</h9>
+              <div class="character-description">
+                Shroomie 1 is mischievous and energetic, always looking for fun.
+                They have a habit of getting distracted easily, often running
+                off in excitement. While their carefree nature can be
+                frustrating, they bring much-needed joy to the group.
+              </div>
             </div>
-            <div class="input-box">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
+            <div class="character zwart">
+              <img src="Fotos/2-2 chroomies.png" alt="Shroomie 2" />
+              <h9 class="wit">🟡 Shroomie 2 (The Friendly One)</h9>
+              <div class="character-description wit">
+                Shroomie 2 is warm, welcoming, and eager to help. They believe
+                in giving everyone a chance, even strangers like you. Their
+                optimism sometimes leads them into trouble, but their kindness
+                is what holds the group together.
+              </div>
+            </div>
+            <div class="character">
+              <img src="Fotos/3-3 chroomies.png" alt="Shroomie 3" />
+              <h9>🟢 Shroomie 3 (The Cautious One)</h9>
+              <div class="character-description">
+                Shroomie 3 is the most skeptical of the group. Always on edge,
+                they question everything and are the first to suspect danger.
+                While they may seem paranoid, their caution often proves useful
+                in keeping the group safe.
+              </div>
+            </div>
+            <div class="character zwart">
+              <img src="Fotos/Old one 1.png" alt="Elder Shroom" />
+              <h9 class="wit">🟣 Elder Shroom (The Wise Mother)</h9>
+              <div class="character-description wit">
+                The ancient and revered leader of the Shroomies. She has lived
+                for centuries, holding deep knowledge about the forest, its
+                magic, and Bjork’s tragic past. Though she speaks little, her
+                words carry great wisdom.
+              </div>
+            </div>
+            <div class="character">
+              <img src="Fotos/goblin.png" alt="The Goblin" />
+              <h9>👹 The Goblin (The Forest Menace)</h9>
+              <div class="character-description">
+                A sneaky and aggressive creature that lurks in the woods,
+                waiting to ambush travelers. Driven by greed and hunger, this
+                goblin sees you as either a threat or a meal. Though not the
+                strongest foe, its cunning nature makes it a tricky opponent.
+              </div>
+            </div>
+            <div class="character zwart">
+              <img src="Fotos/Bjork.png" alt="Bjork (Cute & Friendly Form)" />
+              <h9 class="wit">💙 Bjork (Cute &amp; Friendly Form)</h9>
+              <div class="character-description wit">
+                Bjork appears as a small, feathery creature with expressive eyes
+                and delicate wings. In this form, he is playful, curious, and
+                sometimes even shy. However, his emotions are fragile—he can
+                quickly shift from joyful to withdrawn, hinting at the turmoil
+                hidden within him.
+              </div>
+            </div>
+            <div class="character">
+              <img
+                src="Fotos/Evil bjork.png"
+                alt="Bjork (Scary & Monstrous Form)"
               />
+              <h9>🖤 Bjork (Scary &amp; Monstrous Form)</h9>
+              <div class="character-description">
+                When overwhelmed by negative emotions, Bjork transforms into a
+                towering, nightmarish beast. His body twists unnaturally, his
+                wings become jagged, and his hollow eyes glow with unsettling
+                energy. In this form, he is unpredictable, dangerous, and barely
+                in control of himself.
+              </div>
             </div>
-            <div class="input-box">
-              <textarea
-                name="message"
-                placeholder="Your message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button class="send-button" type="submit">Send</button>
-          </form>
-          <div class="contact-info">
-            <p><strong>My phone number</strong><br />0031620243966</p>
-            <p><strong>My email</strong><br />ana.t08@yahoo.com</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <script src="script.js"></script>
+      <!-- History Section -->
+      <section id="history" class="section history">
+        <div class="history-header">
+          <h1>The History of <span>Achromatic Tale</span></h1>
+          <h2>Developed by Twisted Realm Studio</h2>
+        </div>
+
+        <div class="history-content">
+          <div class="history-section idea">
+            <h3>The Birth of an Idea</h3>
+            <p>
+              <i>"Achromatic Tale"</i> began as a passion project by our small
+              indie team, <b>Twisted Realm Studio</b>. Our goal was simple: to
+              create a visual novel that blends horror, fantasy, and
+              psychological tension while giving players emotional choices that
+              truly impact the game world.
+            </p>
+            <p>
+              Inspired by dark fairy tales, psychological horror, and games that
+              explore morality, we wanted to create a world that reacts
+              dynamically to player choices. From the start, we knew this
+              wouldn't be a traditional visual novel—it had to be something more
+              immersive, something that left players questioning their own
+              decisions.
+            </p>
+          </div>
+
+          <div class="history-section development">
+            <h3>Development Process</h3>
+            <p>
+              Development started just a week ago, making this one of our
+              fastest yet most intense game jams. Our team split into different
+              roles:
+            </p>
+            <ul>
+              <li>
+                <b>Story &amp; Dialogue</b> - Crafted to immerse the player in a
+                surreal, eerie world.
+              </li>
+              <li>
+                <b>Art &amp; Character Design</b> - Every sprite and background
+                was hand-drawn to maintain a distinct, eerie aesthetic.
+              </li>
+              <li>
+                <b>Coding &amp; Mechanics</b> -Built using Ren'Py for the game
+                and HTML, CSS, and JavaScript for the website.
+              </li>
+              <li>
+                <b>Music &amp; Sound Design</b> - Every sound effect and
+                background track was chosen to enhance the shifting moods of the
+                game.
+              </li>
+            </ul>
+            <p>
+              Despite the tight deadline, our shared vision kept us pushing
+              forward. We encountered obstacles—debugging choice-based
+              mechanics, adjusting Bjork's transformations, and ensuring the
+              mood shifts were seamless—but each challenge made the game
+              stronger.
+            </p>
+          </div>
+
+          <div class="history-section concept">
+            <h3>The Core Concept</h3>
+            <p>
+              In <i>"Achromatic Tale"</i>, the player wakes up in a mysterious
+              fairytale-like forest inhabited by small creatures called
+              <b>Shroomies</b>. However, the real mystery begins when they meet
+              <b>Bjork</b>, a mysterious and unpredictable creature whose
+              emotions physically alter the world around him.
+            </p>
+            <p>
+              Every dialogue choice directly influences Bjork's emotional state,
+              causing the once-bright and whimsical forest to either remain safe
+              or transform into a nightmarish realm. As the player delves
+              deeper, they must unravel the dark past of this world, navigate
+              Bjork's shifting moods, and ultimately determine whether the realm
+              is saved or doomed.
+            </p>
+          </div>
+
+          <div class="history-section features">
+            <h3>Innovative Features</h3>
+            <ul>
+              <li>
+                <b>Emotionally reactive AI</b> - Bjork's personality shifts
+                dynamically based on the player's choices.
+              </li>
+              <li>
+                <b>Multiple Endings</b> - Players can reach vastly different
+                conclusions depending on their relationship with Bjork.
+              </li>
+              <li>
+                <b>Hand-Drawn Art</b> - Every visual element was created from
+                scratch for a unique atmosphere.
+              </li>
+              <li>
+                <b>Mini-Games &amp; Quick Battles</b> - Unlike most visual
+                novels, <i>"Achromatic Tale"</i> includes interactive elements
+                like duels and survival moments.
+              </li>
+              <li>
+                <b>Dark Psychological Themes</b> - The story challenges players
+                to consider morality, empathy, and how emotions shape reality.
+              </li>
+            </ul>
+          </div>
+
+          <div class="history-section future">
+            <h3>What's Next?</h3>
+            <p>
+              <i>"Achromatic Tale"</i> was created as a school project,
+              developed within a short time frame for our upcoming presentation
+              on Thursday. While we don't plan to continue development beyond
+              this version, the process has been an incredible learning
+              experience for our team.
+            </p>
+            <p>
+              We're excited to showcase our work, share our creative journey,
+              and see how players react to Bjork's story. This project
+              challenged us to think critically, collaborate effectively, and
+              push our creative limits—making it an experience we won't forget.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Creators Section -->
+      <section id="creators" class="section creators">
+        <h2>Creators</h2>
+        <div class="creators-grid">
+          <div class="creator-card paars">
+            <img class="Naam" src="Fotos/Ninaaaa.jpg" alt="Creator 1" />
+            <p>Nina Kapralov</p>
+            <p>
+              Nina played a crucial role in our project by writing the game's
+              code and helping shape the story. Her programming skills brought
+              our ideas to life, ensuring that the game runs smoothly, while her
+              creative input helped develop the narrative.
+            </p>
+          </div>
+          <div class="creator-card groen">
+            <img class="Naam" src="Fotos/Untitled-2.png" alt="Creator 2" />
+            <p>Hawa Ahmed</p>
+            <p>
+              Hawa is a key part of our team, contributing both as a programmer
+              and an artist. She worked on essential game mechanics, ensuring
+              smooth gameplay, while also adding her artistic touch to some of
+              the game's visuals.
+            </p>
+          </div>
+          <div class="creator-card oranje">
+            <img class="Naam Ana" src="Fotos/eu.jpg" alt="Creator 3" />
+            <p>Ana Tirziu</p>
+            <p>
+              Ana was responsible for designing and developing the website. She
+              ensured that our game has a strong online presence, making it easy
+              for players to learn about the project, access updates, and stay
+              connected with the team.
+            </p>
+          </div>
+          <div class="creator-card rood">
+            <img class="Naam" src="Fotos/Untitled-1.png" alt="Creator 4" />
+            <p>Nathalie Bolman</p>
+            <p>
+              Natalie was the artist behind the characters and most of the
+              visual elements in the game. Her artistic vision and attention to
+              detail brought the characters to life, making the game's world
+              more immersive and visually appealing.
+            </p>
+          </div>
+          <div class="creator-card blauw">
+            <img class="Naam" src="Fotos/Untitled-3.png" alt="Creator 5" />
+            <p>Jim de Blij</p>
+            <p>
+              Jim worked on the backgrounds, creating the atmospheric settings
+              that enhance the game's experience. He also contributed to the
+              story, helping to develop the world and narrative elements that
+              make the game more engaging.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

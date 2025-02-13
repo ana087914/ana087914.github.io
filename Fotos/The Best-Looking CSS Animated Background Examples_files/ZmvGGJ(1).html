@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://cdpn.io/noeldelgado/fullembedgrid/ZmvGGJ?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+
+
+  <title>#codevember 11/2018 — rgb</title>
+
+    <link rel="canonical" href="https://codepen.io/noeldelgado/pen/ZmvGGJ">
+  
+  <link rel="stylesheet" href="./normalize-5.0.0.min.css">
+
+  
+  
+<style>
+:root {
+  font-size: 12px;
+  font-family: monospace;
+  --color: #FF0000;
+  --bg: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--color);
+  background-color: var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+.credits {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+}
+
+.credits > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <div class="credits">
+  <span>
+    by &nbsp;
+    <a href="https://twitter.com/pixelia_me" rel="noopener noreferrer" target="_blank" title="Noel Delgado">
+      <svg height="12" viewBox="0 0 57 30">
+        <path d="M28.1312,9.5341 C29.7966,9.5341 32.1025,10.627 34.248,12.368 C49.3297,11.5836 53.8793,-0.4796 55.5773,0.6783 C57.8326,3.2476 50.8638,16.3535 39.4,19.088 C39.8655,20.2628 40.1364,21.4786 40.1364,22.6983 C40.1364,25.9478 38.837,26.7409 36.7281,28.8974 L36.704,28.824 C36.4799,29.0276 36.208,29.2318 35.8945,29.4 C35.8945,29.4 36.1346,27.0065 34.9341,26.7672 C34.9341,26.7672 34.3739,27.4054 33.0133,27.2459 C32.8532,25.8896 32.293,25.4109 32.1329,25.3311 C31.4126,25.4109 30.9324,26.5278 30.132,26.5278 C29.8,26.1969 29.5184,25.5615 29.312,24.972 C29.0201,25.4221 28.6036,26.1128 28.2512,26.2885 C27.8796,26.2885 27.1476,25.2858 26.836,24.832 C26.6262,25.4581 26.3285,26.1707 25.9702,26.5278 C25.1699,26.5278 24.6896,25.4109 23.9694,25.3311 C23.8093,25.4109 23.249,25.8896 23.089,27.2459 C21.7284,27.4054 21.1681,26.7672 21.1681,26.7672 C19.9676,27.0065 20.2077,29.4 20.2077,29.4 C19.6122,29.0804 19.1739,28.6307 18.908,28.304 L18.8667,28.3947 C17.1544,26.3262 16.1259,25.5896 16.1259,22.6983 C16.1259,21.4938 16.3637,20.2895 16.784,19.128 C5.2094,16.4922 -1.8448,3.2615 0.4227,0.6783 C2.119,-0.4785 6.6627,11.5578 21.708,12.364 C23.8143,10.6244 26.1724,9.5341 28.1312,9.5341 Z M28.8514,20.3048 C28.8514,20.3048 30.4121,21.7409 32.213,21.7409 C34.0137,21.7409 35.3343,19.3474 35.3343,19.3474 L28.8514,20.3048 Z M20.6879,19.3474 C20.6879,19.3474 22.2486,21.7409 24.0494,21.7409 C25.8502,21.7409 27.1707,20.3048 27.1707,20.3048 L20.6879,19.3474 Z" fill-rule="evenodd"></path>
+      </svg>
+    </a>
+  </span>
+</div>
+  <script src="./TweenMax.min.js.download"></script>
+<script src="./pixi.min.js.download"></script>
+<script src="./PixiPlugin.min.js.download"></script>
+      <script id="rendered-js">
+const { log } = console;
+
+log('🎨');
+
+const internals = {
+  config: {
+    totalGroups: 50 },
+
+  colors: [
+  [0x00ffff, 0xff0000],
+  [0x00ff00, 0xff00ff],
+  [0x0000ff, 0xffff00]] };
+
+
+
+internals.w = window.innerWidth;
+internals.h = window.innerHeight;
+
+internals.random = (min, max) => min + Math.random() * (max - min);
+
+// -------
+
+internals.app = new PIXI.Application({
+  width: internals.w,
+  height: internals.h,
+  antialias: true,
+  resolution: window.devicePixelRatio,
+  transparent: false,
+  autoResize: true,
+  backgroundColor: 0xFFFFFF });
+
+
+document.body.appendChild(internals.app.view);
+
+// -------
+
+class Shapes {
+
+  constructor(index) {
+
+    this.index = index;
+    this.offset = 50;
+    this.colorsIndex = 0;
+
+    this.container = new PIXI.Container();
+    this.graphicsContainer = new PIXI.Container();
+    this.graphicA = new PIXI.Graphics();
+    this.graphicA.blendMode = PIXI.BLEND_MODES.MULTIPLY;
+    this.graphicB = new PIXI.Graphics();
+    this.graphicB.blendMode = PIXI.BLEND_MODES.MULTIPLY;
+
+    this.draw(0);
+
+    this.graphicsContainer.addChild(this.graphicA);
+    this.graphicsContainer.addChild(this.graphicB);
+
+    this.container.addChild(this.graphicsContainer);
+
+    this.container.pivot.x = this.getWidth() / 2;
+    this.container.pivot.y = this.getHeight() / 2;
+
+    this.reset().animate();
+  }
+
+  get() {
+
+    return this.container;
+  }
+
+  getWidth() {
+
+    return this.get().children[0].width;
+  }
+
+  getHeight() {
+
+    return this.get().children[0].height;
+  }
+
+  draw(colorsIndex) {
+
+    if (colorsIndex === undefined) {
+      this.colorsIndex = ++this.colorsIndex % internals.colors.length;
+    }
+
+    const colors = internals.colors[this.colorsIndex];
+
+    if (this.index % 2) {
+      this.graphicA.clear();
+      this.graphicA.beginFill(colors[0]);
+      this.graphicA.drawRect(internals.random(0, this.offset), internals.random(0, this.offset), 60, 60);
+      this.graphicA.endFill();
+
+      this.graphicA.beginFill(colors[1]);
+      this.graphicA.drawRect(internals.random(0, this.offset), internals.random(0, this.offset), 60, 60);
+      this.graphicA.endFill();
+    } else
+    {
+      this.graphicB.clear();
+      this.graphicB.beginFill(colors[0]);
+      this.graphicB.drawCircle(internals.random(0, this.offset), internals.random(0, this.offset), 30);
+      this.graphicB.endFill();
+
+      this.graphicB.beginFill(colors[1]);
+      this.graphicB.drawCircle(internals.random(0, this.offset), internals.random(0, this.offset), 30);
+      this.graphicB.endFill();
+    }
+
+    return this;
+  }
+
+  animate() {
+
+    let positionX, positionY;
+
+    const rotation = internals.random(-360, 360);
+    const scale = internals.random(0.5, 1.25);
+    const delay = this.index * 0.1;
+
+    if (Math.random() > 0.5) {
+      positionX = internals.random(0 - this.getWidth(), internals.w + this.getWidth());
+      positionY = Math.random() > 0.5 ? internals.h + this.getHeight() : -this.getHeight();
+    } else
+    {
+      positionX = Math.random() > 0.5 ? internals.w + this.getWidth() : -this.getWidth();
+      positionY = internals.random(0 - this.getHeight(), internals.h + this.getHeight());
+    }
+
+    TweenMax.to(this.get(), internals.random(2, 6), {
+      pixi: {
+        positionX,
+        positionY,
+        rotation,
+        scale },
+
+      delay,
+      onComplete: () => {
+
+        this.reset().animate();
+      } });
+
+
+    return this;
+  }
+
+  reset() {
+
+    this.get().scale.set(0);
+    this.get().position.set(internals.w / 2, internals.h / 2);
+    this.get().rotation = 0;
+
+    return this;
+  }}
+
+
+// -------
+
+TweenLite.defaultEase = Power0.easeNone;
+
+internals.shapes = [];
+for (let i = 0; i < internals.config.totalGroups; i++) {if (window.CP.shouldStopExecution(0)) break;
+  const s = new Shapes(i);
+  internals.shapes.push(s);
+  internals.app.stage.addChild(s.get());
+}
+
+// -------
+window.CP.exitedLoop(0);
+function changeColors() {
+  const len = internals.shapes.length;
+
+  for (let i = 0; i < len; i++) {if (window.CP.shouldStopExecution(1)) break;
+    internals.shapes[i].draw();
+  }window.CP.exitedLoop(1);
+}
+
+function resize() {
+
+  setTimeout(() => {
+
+    internals.w = window.innerWidth;
+    internals.h = window.innerHeight;
+    internals.app.renderer.resize(internals.w, internals.h);
+  }, 200);
+}
+
+function render() {
+
+  internals.app.renderer.render(internals.app.stage);
+}
+
+window.addEventListener('click', changeColors);
+window.addEventListener('touchstart', changeColors);
+window.addEventListener('resize', resize);
+window.addEventListener('orientationchange', resize);
+TweenLite.ticker.addEventListener("tick", render);
+//# sourceURL=pen.js
+    </script><canvas width="1516" height="836" style="touch-action: none; width: 758px; height: 418px; cursor: inherit;"></canvas>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+
+
+
+</body></html>
