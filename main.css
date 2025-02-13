@@ -570,3 +570,32 @@ h9.wit {
     max-width: 80%; /* Redimensionare imagini */
   }
 }
+/* =================== OPTIMIZARE PENTRU TELEFON =================== */
+
+@media screen and (max-width: 767px) {
+  /* 1️⃣ Titlul "Characters" - Reduce dimensiunea */
+  .characters-title {
+    font-size: 24px; /* Mai mic pentru telefoane */
+    text-align: center; /* Centrat */
+  }
+
+  /* 2️⃣ Sectiunea Home - Fixează header-ul și imaginea de fundal */
+  .home {
+    background-size: cover; /* Asigură că imaginea se vede întreagă */
+    background-position: center; /* Centrare pe ecran */
+    padding: 20px; /* Adaugă spațiu pentru a nu fi prea înghesuit */
+  }
+
+  .home h1 {
+    font-size: 28px; /* Titlul mai mic */
+    text-align: center; /* Centrat */
+  }
+
+  /* 3️⃣ Sectiunea Informations - Îmbunătățește vizibilitatea textului */
+  .informations-text {
+    font-size: 16px; /* Mai ușor de citit */
+    line-height: 1.4; /* Mai mult spațiu între rânduri */
+    text-align: justify; /* Text justificat pentru aspect mai curat */
+    padding: 10px; /* Adaugă un spațiu mai bun pe margini */
+  }
+}
