@@ -522,80 +522,80 @@ h9.wit {
   font-weight: 500;
   font-style: normal;
 }
-/* =================== MEDIA QUERIES =================== */
-
-/* Tablete (768px - 1024px) */
-@media screen and (max-width: 1024px) {
-  .nav ul {
-    flex-direction: column; /* Meniul devine vertical */
-    align-items: center;
-  }
-
-  .characters-grid {
-    grid-template-columns: 1fr 1fr; /* 2 coloane în loc de 3 */
-  }
-
-  .creators-grid {
-    grid-template-columns: 1fr 1fr; /* 2 coloane pentru creatori */
-  }
-}
-
-/* Telefoane (max-width: 767px) */
+/* =================== MEDIA QUERY PENTRU TELEFON =================== */
 @media screen and (max-width: 767px) {
-  body {
-    font-size: 14px; /* Diminuează fonturile */
+  /* ✅ 1. Header devine un sidebar vertical */
+  header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 70px !important; /* Lățime sidebar */
+    height: 100vh !important; /* Ocupă toată înălțimea ecranului */
+    background: black !important; /* Fundal solid */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 0 !important;
+    z-index: 999 !important;
   }
 
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+  /* ✅ Stil pentru link-uri sau meniul din header */
+  header a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    margin: 15px 0 !important;
+    display: block !important;
+    text-align: center !important;
   }
 
-  .nav ul li {
-    margin: 5px 0;
-  }
-
-  .characters-grid,
-  .creators-grid {
-    grid-template-columns: 1fr; /* O singură coloană pentru caractere și creatori */
-  }
-
-  .history-content {
-    padding: 15px; /* Mai puțin padding pentru text */
-  }
-
-  .character img,
-  .creator-card img {
-    max-width: 80%; /* Redimensionare imagini */
-  }
-}
-/* =================== OPTIMIZARE PENTRU TELEFON =================== */
-
-@media screen and (max-width: 767px) {
-  /* 1️⃣ Titlul "Characters" - Reduce dimensiunea */
-  .characters-title {
-    font-size: 24px; /* Mai mic pentru telefoane */
-    text-align: center; /* Centrat */
-  }
-
-  /* 2️⃣ Sectiunea Home - Fixează header-ul și imaginea de fundal */
+  /* ✅ 2. Fixăm Background-ul din Home Section */
   .home {
-    background-size: cover; /* Asigură că imaginea se vede întreagă */
-    background-position: center; /* Centrare pe ecran */
-    padding: 20px; /* Adaugă spațiu pentru a nu fi prea înghesuit */
+    position: relative !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background: url("calea/catre/imagine.jpg") no-repeat center center !important;
+    background-size: cover !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-left: 80px !important; /* Evităm să se suprapună cu sidebar-ul */
   }
 
+  /* ✅ 3. Stil pentru titlul din Home Section */
   .home h1 {
-    font-size: 28px; /* Titlul mai mic */
-    text-align: center; /* Centrat */
+    font-size: 28px !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
   }
 
-  /* 3️⃣ Sectiunea Informations - Îmbunătățește vizibilitatea textului */
-  .informations-text {
-    font-size: 16px; /* Mai ușor de citit */
-    line-height: 1.4; /* Mai mult spațiu între rânduri */
-    text-align: justify; /* Text justificat pentru aspect mai curat */
-    padding: 10px; /* Adaugă un spațiu mai bun pe margini */
+  .home p {
+    font-size: 18px !important;
+    color: white !important;
+    max-width: 90% !important;
+    text-align: center !important;
+  }
+
+  /* ✅ 4. Fixăm Textul din "Informations" */
+  .informations {
+    padding: 20px !important;
+    text-align: justify !important;
+    padding-left: 80px !important; /* Pentru a nu fi acoperit de sidebar */
+  }
+
+  .informations h2 {
+    font-size: 22px !important;
+    text-align: center !important;
+  }
+
+  .informations p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+    padding: 10px !important;
+    text-align: justify !important;
   }
 }
